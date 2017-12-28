@@ -1,0 +1,19 @@
+{
+  "name": "serverless-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "local-db": "sls dynamodb install",
+    "dev": "SLS_DEBUG=* sls offline start",
+    "deploy": "SLS_DEBUG=* sls deploy",
+    "deploy-client": "SLS_DEBUG=* serverless client deploy",
+    "remove": "SLS_DEBUG=* sls remove;SLS_DEBUG=* serverless client remove"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.175.0",
+    "serverless-dynamodb-local": "^0.2.26",
+    "serverless-finch": "^1.3.0",
+    "serverless-offline": "^3.16.0"
+  }
+}
